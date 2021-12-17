@@ -1,4 +1,5 @@
-from linear_search import verify, numbers
+from verify import verify, numbers
+
 def recursive_binary_search(list, target, start=0, end=None):
     if end is None:
         end = len(list) - 1

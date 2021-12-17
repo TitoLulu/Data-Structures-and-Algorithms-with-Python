@@ -1,3 +1,5 @@
+from verify import verify, numbers
+
 def linear_search(list, target):
     """
     Returns the index position of target if found, else None
@@ -7,12 +9,6 @@ def linear_search(list, target):
             return i
     return None 
 
-def verify(index):
-    if index is not None:
-        print("Target found in list")
-    else:
-        print('Target not found in list')
 
-numbers = [1,2,3,4,5,6,7,8,9,10]
 result = linear_search(numbers,2)
 verify(result)

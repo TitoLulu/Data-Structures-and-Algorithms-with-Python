@@ -1,4 +1,5 @@
-from linear_search import verify, numbers
+from verify import verify, numbers
+
 def binary_search(list,target):
     first = 0
     last = len(list) - 1
