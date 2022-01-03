@@ -1,21 +1,17 @@
 from verify import verify, numbers
 
-def recursive_binary_search(list, target, start=0, end=None):
-    if end is None:
-        end = len(list) - 1
-    if start > end:
-        return -1
+def recursive_binary_search(list, target):
 
-    mid = (start + end) // 2
-
-    if target == list[mid]:
-        return mid
+    mid = len(list) // 2
+    print(list, '-->', mid)
+    if list[mid] == target:
+        return True
 
     else:
-        if target < list[mid]:
-            return recursive_binary_search(list,target, start,mid - 1)
+        if list[mid] < target:
+            return recursive_binary_search(list[mid+1:],target)
         else:
-            return recursive_binary_search(list, target, mid+1,end)
+            return recursive_binary_search(list[:mid], target)
 
 result = recursive_binary_search(numbers,9)
 verify(result)
